@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link href="./assets/styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Frontend Mentor | Results summary component</title>
+  <script>
+    tailwind.config = {
+      content: ["./src/**/*.{html,js}"],
+      theme: {
+        extend: {
+          screens: {
+            tablet: "375px",
+            desktop: "1440px",
+          },
+          colors: {
+            "primary-light-red": "hsl(0, 100%, 67%)",
+            "primary-orangey-yellow": "hsl(39, 100%, 56%)",
+            "primary-green-teal": "hsl(166, 100%, 37%)",
+            "primary-cobalt-blue": "hsl(234, 85%, 45%)",
+            "gradient-light-slate-blue": "hsl(252, 100%, 67%)",
+            "gradient-light-royal-blue": "hsl(241, 81%, 54%)",
+            "circle-violet-blue": "hsla(256, 72%, 46%, 1)",
+            "circle-persian-blue": "hsla(241, 72%, 46%, 0)",
+            "neutral-white": "hsl(0, 0%, 100%)",
+            "neutral-pale-blue": "hsl(221, 100%, 96%)",
+            "neutral-light-lavender": "hsl(241, 100%, 89%)",
+            "neutral-dark-gray-blue": "hsl(224, 30%, 27%)",
+          },
+          fontFamily: {
+            "hanken-grotesk": ["Hanken Grotesk", "sans-serif"],
+          },
+          fontSize: {
+            "body-copy": "18px",
+          },
+          fontWeight: {
+            500: 500,
+            700: 700,
+            800: 800,
+          },
+        },
+      },
+      plugins: [],
+    };
+  </script>
+</head>
+
+<body>
+  <main class="desktop:h-screen desktop:flex desktop:justify-center desktop:items-center">
+    <div
+      class="desktop:flex desktop:h-auto desktop:shadow-xl desktop:rounded-3xl desktop:shadow-neutral-pale-blue overflow-auto">
+      <div
+        class="bg-gradient-to-l from-gradient-light-slate-blue to-gradient-light-royal-blue desktop:rounded-3xl p-10 desktop:w-72 text-center space-y-3 tablet:rounded-b-3xl">
+        <h1 class="text-neutral-light-lavender font-bold text-xl">
+          Your Result
+        </h1>
+        <div class="flex justify-center items-center h-auto">
+          <div
+            class="bg-gradient-to-r from-circle-violet-blue to-circle-persian-blue rounded-full h-20 w-20 flex justify-center items-center p-20">
+            <div class="space-y-3">
+              <p class="text-neutral-white text-5xl font-bold">76</p>
+              <p class="text-neutral-light-lavender font-semibold">of 100</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-neutral-white font-bold text-lg">Great!</p>
+        <p class="text-neutral-light-lavender text-sm">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="p-10 desktop:w-80">
+        <h1 class="font-bold text-xl mb-4">Summary</h1>
+        <div class="space-y-5">
+          <figure class="bg-opacity-10 bg-primary-light-red rounded-lg">
+            <div class="flex p-2">
+              <img src="assets/images/icon-reaction.svg" class="mr-2 bg-inherit" />
+              <div class="flex">
+                <span class="text-primary-light-red font-bold">Reaction</span>
+              </div>
+              <div class="ml-auto">
+                <span class="text-black font-semibold text-md">80</span>
+                <span class="text-neutral-light-lavender font-semibold text-md">/ 100</span>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="bg-opacity-10 bg-primary-orangey-yellow rounded-lg">
+            <div class="flex p-2">
+              <img src="assets/images/icon-memory.svg" class="mr-2" />
+              <div class="flex">
+                <span class="text-primary-orangey-yellow font-bold">Memory</span>
+              </div>
+              <div class="ml-auto">
+                <span class="text-black font-semibold text-md">92</span>
+                <span class="text-neutral-light-lavender font-semibold text-md">/ 100</span>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="bg-opacity-10 bg-primary-green-teal rounded-lg">
+            <div class="flex p-2">
+              <img src="assets/images/icon-verbal.svg" class="mr-2" />
+              <div class="flex">
+                <span class="text-primary-green-teal font-bold">Verbal</span>
+              </div>
+              <div class="ml-auto">
+                <span class="text-black font-semibold text-md">61</span>
+                <span class="text-neutral-light-lavender font-semibold text-md">/ 100</span>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="bg-opacity-10 bg-primary-cobalt-blue rounded-lg">
+            <div class="flex p-2">
+              <img src="assets/images/icon-visual.svg" class="mr-2" />
+              <div class="flex">
+                <span class="text-primary-cobalt-blue font-bold">Visual</span>
+              </div>
+              <div class="ml-auto">
+                <span class="text-black font-semibold text-md">72</span>
+                <span class="text-neutral-light-lavender font-semibold text-md">/ 100</span>
+              </div>
+            </div>
+          </figure>
+
+          <button
+            class="rounded-2xl desktop:bg-gradient-to-l desktop:from-gradient-light-slate-blue desktop:to-gradient-light-royal-blue w-full text-neutral-white tablet:bg-neutral-dark-gray-blue p-2">
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="bottom-1 absolute w-full text-center font-bold desktop:text-lg tablet:text-sm">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-700 underline">Frontend
+          Mentor</a>. Coded by
+        <a href="https://www.linkedin.com/in/thiago-jurge/" target="_blank" class="text-blue-700 underline">Thiago
+          Jurge</a>.
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
